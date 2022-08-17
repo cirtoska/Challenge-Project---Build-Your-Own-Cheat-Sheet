@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom CheetSheet Typography</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <section id="main">
+      <h1>Typography</h1>
+      <div class="container">
+        <h2>CSS Fonts</h2>
+        <p>
+          The CSS font properties define the font family, boldness, size, and
+          the style of a text.
+        </p>
+        <figure>
+          <img
+            src="./images/css-fonts.png"
+            alt="css fonts sans-serif vs serif"
+          />
+          <figcaption>Difference Between Serif and Sans-serif Fonts</figcaption>
+        </figure>
+        <h2>CSS Font Families</h2>
+        <p>In CSS, there are two types of font family names:</p>
+        <ul>
+          <li>
+            <b>generic family</b> - a group of font famillies with a similar
+            look (like "Serif" or "Monospace")
+          </li>
+          <li>
+            <b>font family</b> - a specific font family (like "Times New Roman"
+            or "Arial")
+          </li>
+        </ul>
+        <img src="./images/css-fonts-2.png" alt="font families example" />
+        <h2>Font Family</h2>
+        <p>
+          The font family of a text is set with the
+          <code>font-family</code> property.
+        </p>
+        <p>
+          The <code>font-family</code> property should hold several font names
+          as a "fallback" system. If the browser does not support the first
+          font, it tries the next font, and so on.
+        </p>
+        <p>
+          Start with the font you want, and end with a generic family, to let
+          the browser pick a similar font in the generic family, if no other
+          fonts are available.
+        </p>
+
+        <h2>Google Fonts</h2>
+        <img src="./images/Google_Fonts_logo.svg.png" alt="google fonts logo" />
+        <p>
+          If you do not want to use any of the standard fonts in HTML, you can
+          use the Google Fonts API to add hundreds of other fonts to your page.
+        </p>
+        <p>
+          Just add a stylesheet link and refer to a font family of your choice:
+        </p>
+        <pre>
+          <code>
+    &lt;!DOCTYPE html&gt;
+          &lt;html&gt;
+              &lt;head&gt;
+                  &lt;link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia"&gt;
+                  &lt;style&gt;
+                  body {
+                    font-family: "Sofia";
+                    font-size: 22px;
+                  }
+                  &lt;/style&gt;
+              &lt;/head&gt;
+              &lt;body&gt;
+                  &lt;h1&gt;Sofia Font&lt;/h1&gt;
+                  &lt;p&gt;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci, ex!&lt;/p&gt;
+              &lt;/body&gt;
+          &lt;/html&gt; 
+          </code>
+        </pre>
+        <h2>CSS @font-face rule</h2>
+        <p>
+          The CSS <code>@font-face</code> rule allows external fonts or font
+          files to be imported directly into stylesheets.The location of the
+          font file must be specified in the CSS rule so that the files can be
+          loaded from that location. This rule also allows locally hosted fonts
+          to be added using a relative file path instead of a web URL.
+        </p>
+        <pre>
+          <code>
+    @font-face {
+      font-family: 'MyParagraphFont';
+      src: url('fonts/Roboto.woff2') format('woff2'),
+            url('fonts/Roboto.woff') format('woff'),
+            url('fonts/Roboto.ttf') format('truetype');
+    }
+          </code>
+        </pre>
+        <p>
+          Once the <code>@font-face</code> at-rule is defined, you can use the
+          font in your stylesheet!
+        </p>
+        <pre>
+          <code>
+    p {
+      font-family: 'MyParagraphFont', sans-serif;
+    }
+          </code>
+        </pre>
+        <h2>CSS Fallback Fonts</h2>
+        <p>
+          The CSS <code>font-family</code> property can have multiple fonts
+          declared in order of preference. In this case the fonts following the
+          initial font are known as the fallback fonts. If the initial value of
+          the property <code>font-family</code> fails to load to the webpage,
+          the fallback fonts will be used.
+        </p>
+        <pre>
+            <code>
+    /* Here `Arial` is the fallback font for &lt;p&gt; tags */
+      p {
+        font-family: "Helvetica", "Arial";
+      }
+            </code>
+          </pre>
+        <h2>The CSS line-height property</h2>
+        <p>
+          The CSS <code>line-height</code> property declares the vertical
+          spacing between lines of text. It accepts both unitless numbers as a
+          ratio (eg. 2) and numbers specified by unit as values (eg. 12px) but
+          it does not accept negative numbers. A unitless number is an absolute
+          value that will compute the line height as a ratio to the font size
+          and a unit number can be any valid CSS unit (eg. pixels, percents,
+          ems, rems, etc.). To set the <code>line-height</code> of the elements
+          to 10px, the given CSS declaration can be used.
+        </p>
+        <pre>
+          <code>
+      p {
+        line-height: 10px;
+        }
+          </code>
+        </pre>
+        <h2>CSS font-style property</h2>
+        <p>
+          The CSS <code>font-style</code> property determines the font style in
+          which text will appear. It accepts italic as a value to set the font
+          style to <code>italic</code>.
+        </p>
+        <pre>
+            <code>
+    .text {
+      font-style: italic;
+    }
+            </code>
+          </pre>
+        <h2>CSS font-weight Property</h2>
+        <p>
+          The CSS <code>font-weight</code> property declares how thick or thin
+          should be the characters of a text. Numerical values can be used with
+          this property to set the thickness of the text. The numeric scale
+          range of this property is from <code>100</code> to
+          <code>900</code> and accepts only multiples of <code>100</code>. The
+          default value is normal while the default numerical value is
+          <code>400</code>. Any value less than <code>400</code> will have text
+          appear lighter than the default while any numerical value greater than
+          the <code>400</code> will appear bolder. In the given example, all the
+          elements will appear in a bolder font.
+        </p>
+        <pre>
+              <code>
+      /* Sets the text as bolder. */
+      p {
+        font-weight: 700;
+      }
+              </code>
+            </pre>
+      </div>
+    </section>
+    <footer>
+      <p class="copy">
+        Copyright &copy; 2022 | Created by
+        <span class="signature">Aleksandra Chirtoska</span>
+      </p>
+    </footer>
+  </body>
+</html>

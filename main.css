@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Merriweather:ital@1&family=Poppins&family=Source+Code+Pro&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+}
+
+p {
+  line-height: 1.4;
+  padding: 10px 0;
+}
+
+#main {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.container {
+  margin: 3rem 2rem;
+}
+
+h1 {
+  font-family: 'Lora', serif;
+  font-size: 100px;
+  letter-spacing: 5px;
+  text-align: center;
+  background-color: lightcoral;
+  color: white;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+h2 {
+  text-transform: uppercase;
+  text-decoration: underline;
+  padding: 1rem 0;
+}
+
+figcaption {
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+  padding: 1rem;
+  text-align: center;
+}
+figure > img {
+ padding: 1rem;
+ margin: 0 auto;
+ width: 100%;
+}
+figure {
+  background-color: rgb(252, 192, 192);
+  margin: 1rem 0;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+ul {
+  padding: 1rem 1.5rem;
+}
+
+code {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 16px;
+  background-color: rgb(233, 232, 232);
+  padding: 3px;
+}
+pre {
+  background-color: rgb(36, 36, 36);
+  color: white;
+  padding: 0 2rem;
+  border-radius: 20px;
+}
+
+pre > code {
+  background-color: transparent;
+  padding: 0;
+  font-size: 14px;
+}
+
+footer {
+  background: black;
+  color: white;
+  text-align: center;
+}
+
+.copy {
+  font-size: 16px;
+  padding: 2rem;
+}
+
+.signature {
+  font-family: 'Merriweather', serif;
+}
